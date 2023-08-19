@@ -12,6 +12,7 @@ Databases must be configured for replication. Refer to [MySQL](https://www.postg
 
 * Support Linux, Windows, MacOS
 * Supports MySQL and PostgreSQL
+* When the proxy's backend is MySQL, clients use the MySQL protocol to access the proxy. When the proxy's backend is PostgreSQL, cients use the PostgreSQL protocol to access the proxy.
 * Proxies client login requests to master
 * Configurable read weights for replicas
 * Connection pooling for better replica efficiency

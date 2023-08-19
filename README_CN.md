@@ -10,7 +10,8 @@
 ## 功能
 * 跨平台，支持Linux，Windows，MacOS
 * 支持MySQL 和 PostgreSQL
-* 代理客户端登录请求到主库，用户名
+* 当proxy后端为MySQL时，用户使用MySQL协议访问proxy。当proxy后端为PostgreSQL时，用户使用PostgreSQL协议访问proxy。
+* 代理客户端登录请求到主库
 * 支持设置从库的权重
 * 代理使用连接池管理从库连接，效率更高
 * 事务中的SELECT查询代理到主库，以保证数据的强一致性
