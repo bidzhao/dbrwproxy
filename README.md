@@ -6,7 +6,7 @@
 
 ## Requirements
 
-Databases must be configured for replication. Refer to [MySQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION)，[PostgreSQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION) for how to configure replication.
+Databases must be configured for replication. Refer to [MySQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION), [PostgreSQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION) for how to configure replication.
 
 ## Features
 
