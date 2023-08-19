@@ -2,7 +2,7 @@
 [中文](README_CN.md)
 ## Introduction
 
-**dbrwproxy** is a database proxy that supports read/write splitting for MySQL and PostgreSQL. It forwards modification requests (INSERT, UPDATE, DELETE, etc) to the master database instance and read-only SELECT queries to slave replicas based on configured weights. With this proxy, clients can achieve read/write splitting by simply connecting to dbrwproxy, without any code changes.
+**dbrwproxy** is a database proxy that supports read/write splitting for MySQL and PostgreSQL. It forwards modification requests (INSERT, UPDATE, DELETE, etc) to the main database instance and read-only SELECT queries to replicas database based on configured weights. With this proxy, clients can achieve read/write splitting by simply connecting to dbrwproxy, without any code changes.
 
 ## Requirements
 
@@ -13,10 +13,10 @@ Databases must be configured for replication. Refer to [MySQL](https://www.postg
 * Support Linux, Windows, MacOS
 * Supports MySQL and PostgreSQL
 * When the proxy's backend is MySQL, clients use the MySQL protocol to access the proxy. When the proxy's backend is PostgreSQL, cients use the PostgreSQL protocol to access the proxy.
-* Proxies client login requests to master
+* Proxies client login requests to main database, that is, the client uses the username/password of the main database to log in.
 * Configurable read weights for replicas
 * Connection pooling for better replica efficiency
-* Forwards transactions SELECTs to master for strong consistency
+* Forwards transactions SELECTs to main database for strong consistency
 
 ## Usage
 
@@ -99,6 +99,6 @@ MySQL:
 
 ## License
 
-This project is licensed under the [Mozilla Public License Version 2.0](https://raw.github.com/go-sql-driver/mysql/master/LICENSE)
+This project is licensed under the [Mozilla Public License Version 2.0](LICENSE)
 
 Please read and understand the license terms before using this software.
