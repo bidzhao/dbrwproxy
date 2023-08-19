@@ -21,10 +21,10 @@ PostgreSQL:
         - Secondary:
           Name: "B"
           Host: "127.0.0.1"
-          Port: 5432
+          Port: 5442
           User: "postgres"
           Password: "12345678"
-          DbName: "zhaoliang"
+          DbName: "mydb"
           Weight: 300
           MaxIdleConnCount: 1
           MaxOpenConnsCount: 10
@@ -45,7 +45,7 @@ MySQL:
           Port: 3306
           User: "root"
           Password: "12345678"
-          DbName: "zhaoliang"
+          DbName: "mydb"
           Weight: 100
           MaxIdleConnCount: 1
           MaxOpenConnsCount: 10
@@ -53,10 +53,10 @@ MySQL:
         - Secondary:
           Name: "F"
           Host: "127.0.0.1"
-          Port: 3306
+          Port: 3316
           User: "root"
           Password: "12345678"
-          DbName: "zhaoliang"
+          DbName: "mydb"
           Weight: 300
           MaxIdleConnCount: 1
           MaxOpenConnsCount: 10
