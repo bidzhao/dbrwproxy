@@ -1,0 +1,63 @@
+PostgreSQL:
+  - Proxy:
+    Name: p1
+    ServerConfig:
+      ProxyAddr: "127.0.0.1:15432"
+    DB:
+      Main:
+        Addr: "127.0.0.1:5432"
+      Secondaries:
+        - Secondary:
+          Name: "A"
+          Host: "127.0.0.1"
+          Port: 5432
+          User: "postgres"
+          Password: "12345678"
+          DbName: "zhaoliang"
+          Weight: 100
+          MaxIdleConnCount: 1
+          MaxOpenConnsCount: 10
+          ConnMaxLifetime: 60
+        - Secondary:
+          Name: "B"
+          Host: "127.0.0.1"
+          Port: 5432
+          User: "postgres"
+          Password: "12345678"
+          DbName: "zhaoliang"
+          Weight: 300
+          MaxIdleConnCount: 1
+          MaxOpenConnsCount: 10
+          ConnMaxLifetime: 60
+
+MySQL:
+  - Proxy:
+    Name: p2
+    ServerConfig:
+      ProxyAddr: "0.0.0.0:13306"
+    DB:
+      Main:
+        Addr: "127.0.0.1:3306"
+      Secondaries:
+        - Secondary:
+          Name: "E"
+          Host: "127.0.0.1"
+          Port: 3306
+          User: "root"
+          Password: "12345678"
+          DbName: "zhaoliang"
+          Weight: 100
+          MaxIdleConnCount: 1
+          MaxOpenConnsCount: 10
+          ConnMaxLifetime: 60
+        - Secondary:
+          Name: "F"
+          Host: "127.0.0.1"
+          Port: 3306
+          User: "root"
+          Password: "12345678"
+          DbName: "zhaoliang"
+          Weight: 300
+          MaxIdleConnCount: 1
+          MaxOpenConnsCount: 10
+          ConnMaxLifetime: 60
