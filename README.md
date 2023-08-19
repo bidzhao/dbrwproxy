@@ -23,7 +23,7 @@ Databases must be configured for replication. Refer to [MySQL](https://www.postg
     go build
 
 ### Configure
-    Modify the config.yml file to configure databases. 
+    Modify the config.yml file to configure databases. You can configure both databases, or only one of them.
 
 ### Run
     ./dbrwproxy -c config.yml
