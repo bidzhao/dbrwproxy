@@ -96,7 +96,7 @@ MySQL:
           ConnMaxLifetime: 60
 ```
 
-##License
+## License
 
 This project is licensed under the [Mozilla Public License Version 2.0](https://raw.github.com/go-sql-driver/mysql/master/LICENSE)
 
