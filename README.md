@@ -1,14 +1,14 @@
-#Database Proxy dbrwproxy 
-[中文](README_cn.md)
-##Introduction
+# Database Proxy dbrwproxy 
+[中文](README_CN.md)
+## Introduction
 
 **dbrwproxy** is a database proxy that supports read/write splitting for MySQL and PostgreSQL. It forwards modification requests (INSERT, UPDATE, DELETE, etc) to the master database instance and read-only SELECT queries to slave replicas based on configured weights. With this proxy, clients can achieve read/write splitting by simply connecting to dbrwproxy, without any code changes.
 
-##Requirements
+## Requirements
 
-Databases must be configured for replication. Refer to [MySQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION)，[PostgreSQL] (https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION) for how to configure replication.
+Databases must be configured for replication. Refer to [MySQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION)，[PostgreSQL](https://www.postgresql.org/docs/current/warm-standby.html#STREAMING-REPLICATION) for how to configure replication.
 
-##Features
+## Features
 
 * Support Linux, Windows, MacOS
 * Supports MySQL and PostgreSQL
@@ -17,18 +17,18 @@ Databases must be configured for replication. Refer to [MySQL](https://www.postg
 * Connection pooling for better replica efficiency
 * Forwards transactions SELECTs to master for strong consistency
 
-##Usage
+## Usage
 
-###Compile
+### Compile
     go build
 
-###Configure
-    Modify the config.yml file to configure databases. 
+### Configure
+    Modify the config.yml file to configure databases. You can configure both databases, or only one of them.
 
-###Run
+### Run
     ./dbrwproxy -c config.yml
 
-###配置文件示例
+### 配置文件示例
 
 ```
 PostgreSQL:
@@ -96,7 +96,7 @@ MySQL:
           ConnMaxLifetime: 60
 ```
 
-##License
+## License
 
 This project is licensed under the [Mozilla Public License Version 2.0](https://raw.github.com/go-sql-driver/mysql/master/LICENSE)
 
