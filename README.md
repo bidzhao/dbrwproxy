@@ -1,5 +1,5 @@
 # Database Proxy dbrwproxy 
-[中文](README_cn.md)
+[中文](README_CN.md)
 ## Introduction
 
 **dbrwproxy** is a database proxy that supports read/write splitting for MySQL and PostgreSQL. It forwards modification requests (INSERT, UPDATE, DELETE, etc) to the master database instance and read-only SELECT queries to slave replicas based on configured weights. With this proxy, clients can achieve read/write splitting by simply connecting to dbrwproxy, without any code changes.
